@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper__zad1{
+            margin: 0 auto;
+            width: 500px;
+            border: 1px solid green;
+            margin-bottom: 100px;
+        }
+
+        .zad1{
+            animation: zad1 15s linear infinite;
+            height: 40px;
+        }
+
+
+        @keyframes zad1{
+            from{
+                background-color: greenyellow;
+                width: 10%;
+            }
+            to{
+                background-color: greenyellow;
+                width: 90%;
+            }
+        }
+
+        .wrapper__zad22{
+            margin-bottom: 100px;
+        }
+
+        .zad22{
+            animation: zad22 15s linear infinite;
+            cursor: pointer;
+            height: 40px;
+            animation-play-state: paused;
+        }
+
+        .zad22:hover{
+            animation-play-state: running;
+        }
+
+
+        @keyframes zad22{
+            0%{
+                background-color: orange;
+                width: 10%;
+            }
+            100%{
+                background-color: orange;
+                width: 90%;
+            }
+            0%{
+                background-color: orange;
+                width: 10%;
+            }
+        }
+
+        .zad2 {
+            position: relative;
+            height: 2.4em;
+            margin: 1.5em 1em;
+            padding: .2em;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-bottom: 100px;
+        }
+        .zad2:before {
+            content: attr(data-content);
+            display: inline-block;
+            position: absolute;
+            left: .2em;
+            width: 100%;
+            height: 2em;
+            padding: .2em;
+            background: orange;
+            animation: timing 5s infinite alternate;
+            line-height: 2em;
+            cursor: pointer;
+            text-shadow: .05em .05em teal;
+            text-align: center;
+            text-transform: capitalize;
+            color: #FFF;
+        }
+        .zad2:hover:before{
+            animation-play-state: paused;
+        }
+
+        @keyframes timing {
+            from{
+                left: 0;
+            }
+            to{
+                left: 100%;
+                margin-left: -9.6em;
+            }
+        }
+
+        .wrapper__zad3{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid blue;
+
+            position: relative;
+        }
+
+        .zad3{
+            background-color: blue;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            bottom: 80%;
+
+            animation: ball-anim 15s linear infinite;
+        }
+
+        @keyframes ball-anim {
+            0%{
+                left: 0;
+                bottom: 80%;
+            }
+            30%{
+                left: 30%;
+                bottom: 0%;
+            }
+            40% {
+                left: 50%;
+                bottom: 50%;
+                animation-timing-function: ease-in;
+            }
+            80% {
+                left: 90%;
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper__zad1">
+        <div class="zad1">
+
+        </div>
+    </div>
+
+    <div class="wrapper__zad22">
+        <div class="zad22">
+
+        </div>
+    </div>
+
+    <div class="zad2"></div>
+
+    <div class="wrapper__zad3">
+        <div class="zad3"></div>
+    </div>
+</body>
+</html>
